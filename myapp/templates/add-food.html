@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Food Item</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div class="max-w-lg mx-auto mt-10 bg-white p-6 shadow-lg rounded-lg">
+        <h1 class="text-2xl font-bold text-center mb-4"> Add Food Item</h1>
+
+        <form method="POST" class="space-y-4">
+            {% csrf_token %}
+            
+            <div>
+                <label class="block font-semibold">Food Name</label>
+                <input type="text" name="name" placeholder="Enter food name" required class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div>
+                <label class="block font-semibold">Calories</label>
+                <input type="number" name="calories" placeholder="Calories count" required class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 font-semibold">✅ Add Food</button>
+        </form>
+
+        <div class="text-center mt-4">
+            <a href="/" class="text-blue-500 hover:underline">⬅ Go Back</a>
+        </div>
+    </div>
+</body>
+</html>
