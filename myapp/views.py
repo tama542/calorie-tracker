@@ -13,7 +13,7 @@ def add_food(request):
         calories = request.POST['calories']
         FoodItem.objects.create(name=name, calories=calories)
         return redirect('home')
-    return render(request, 'add_food.html')
+    return render(request, 'add-food.html')
 
 def delete_food(request, food_id):
     FoodItem.objects.get(id=food_id).delete()
